@@ -14,7 +14,7 @@ class LengthCurriculumCallback(BaseCallback):
     """
     def __init__(self, target_success=0.5, window=250, verbose=1, max_len_limit=8):
         super().__init__(verbose)
-        self.targ = target_success
+        self.target_success = target_success
         self.window_size  = window
         self.history = deque(maxlen=self.window_size)
         self.max_len_limit = max_len_limit
